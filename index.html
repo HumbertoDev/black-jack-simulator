@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Hello World!</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="BlackJack Game Simulator" />
+    <meta property="og:type" content="App" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="glass-morphism-efect">
+    <div class="container">
+      <!-- Title -->
+      <div class="head-container">
+        <h1>BlackJack Simulator</h1>
+      </div>
+
+      <!-- Setting the bet amount: the opponent set the same amount of money and at that moment i recieve the first 2 cards (the opponert too)-->
+      <div class="start">
+        <div class="username">
+          <input type="text" id="username" class="username" placeholder="Put your name" />
+        </div>
+        <div class="bet-input">
+          <input type="number" id="bet-amount" class="bet-amount" placeholder="Put your $$$"  />
+          <button id="send-bet" onclick="start()">Send Bet</button>
+          <p><span id="bet-printing"></span></p>
+        </div>
+      </div>
+
+      <!-- Cards: I have to add more cards when the gamer ask for another one. I cant see my opponent cards-->
+      <div class="cards">
+        <h2 id="your-cards">Your Hand:</h2>
+        <div class="cards-container"> 
+          <div id="first-card" class="card-style"></div>
+          <div id="second-card" class="card-style"></div>
+        </div>
+      </div>
+
+      <!-- Asking for other cards -->
+      <div class="ingame-buttons">
+        <button id="give-me" onclick="randomCard()">Give me One!</button>
+        <button id="stop" onclick="compare()">Show Hand</button>
+      </div>
+
+      <!-- Results -->
+      <div class="results">
+        <p id="winner"></p>
+      </div>
+
+      <!-- Restart -->
+      <div class="restart-container">
+        <button class="restart" onclick="restart()">Restart</button>
+      </div>
+    </div>
+    </section>
+    
+    <!-- Background images -->
+    <div><img src="https://cdn.glitch.com/35b7e490-ac5e-48b3-9364-e4a0bfc6fc6d%2Fpngegg.png?v=1623606814779" class="bg-img-1"></div>
+    <div><img src="https://cdn.glitch.com/35b7e490-ac5e-48b3-9364-e4a0bfc6fc6d%2Fpngegg%20(1).png?v=1623606816731" class="bg-img-2"></div>
+    <div><img src="https://cdn.glitch.com/35b7e490-ac5e-48b3-9364-e4a0bfc6fc6d%2Fpngegg%20(1).png?v=1623606816731" class="bg-img-3"></div>
+    
+    <!-- Importing the JS script -->
+    <script src="/script.js"></script>
+  </body>
+</html>
